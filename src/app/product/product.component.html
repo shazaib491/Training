@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 m-auto">
+      <h1 [ngClass]="heading">Product</h1>
+      <div class="border border-primary shadow">
+        <p class="border p-3 shadow">Add To Cart</p>
+        <ul *ngFor="let list of card">
+          <li><p>
+            P_name:-{{list.name}}
+            P_Qty:-{{list.qty}}
+            Amount:-{{list.qty  * list.price}}
+          </p></li>
+        </ul>
+        <button type="button" class="btn btn-info" name="button">Pay now:- {{calculate()}}</button>
+      </div>
+      <app-dproduct *ngFor="let item of product;" [item]='item' (Card)="AddtoCard($event)" ></app-dproduct>
+    </div>
+    </div>
+  </div>

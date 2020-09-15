@@ -20,6 +20,14 @@ handle(event){
   const val=event.target.value;
   this.person[keyname]=val;
 }
+data:any={}
+share(event){
+  const val=event.target.value
+  this.data={
+    name:val,
+    id:Math.random()
+  }
+}
 
 // submit (click) form hide thankyou informmation detail
 submit(){

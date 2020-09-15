@@ -1,0 +1,20 @@
+<table class="table table-primary">
+
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Inc/Dec</th>
+      <th>Card</th>
+    </tr>
+
+  <tr>
+    <td>{{product.name}}</td>
+    <td>{{product.qty}}</td>
+    <td>{{product.qty * product.price}}</td>
+    <td><button type="button" class="btn btn-success" (click)="incQty()" name="button">Inc Qty</button>
+    <button type="button" class="btn btn-danger" (click)="decQty()" name="button">Dec Qty</button></td>
+    <td><button type="button" (click)="update()"  name="button" class="btn btn-danger">{{isAddToCard?'Remove To Card':'Add To Card'}}</button></td>
+
+  </tr>
+</table>

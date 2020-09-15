@@ -1,0 +1,30 @@
+<div [class]="myform">
+  <label for="">Name</label>
+  <!-- item local var normal ! html but angular = var  -->
+  <input type="text" [ngClass]="inputGroup" #items   name="name" value="">
+<button type="button" (click)="getval(items.value)" name="button">Submit</button>
+</div>
+<div class="container">
+  <div class="row mt-5">
+    <div [ngClass]="myclass">
+    <table class="table table-primary">
+      <tr>
+        <th>id</th>
+        <th>Product name</th>
+        <th>Quantity</th>
+        <th>Rate per item</th>
+        <th>Amount</th>
+      </tr>
+      <tr *ngFor="let list of item; let i=index; trackBy:trackByMethod;">
+        <td>{{list.id}}</td>
+        <td>{{list.name}}</td>
+        <td>{{list.qty}}</td>
+        <td>{{list.price}}</td>
+        <td>{{list.qty * list.price}}</td>
+      </tr>
+    </table>
+      <!-- track body -->
+      <button type="button" class="btn btn-warning" (click)="Refresh()" name="button">Refresh</button>
+    </div>
+  </div>
+</div>

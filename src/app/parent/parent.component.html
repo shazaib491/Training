@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mt-4 ">
+
+    <div class="col-md-6 m-auto border p-5 shadow">
+      <h1 class="text-center border p-3">Product Calculator</h1>
+      <div class="form-group">
+        <label for="">Quantity</label>
+        <input type="text" class="form-control" [value]="data?data:''" #item>
+      </div>
+      <button type="button" class="btn btn-secondary btn-block" (click)="setQuantity(item.value)" name="button">Add</button>
+      </div>
+      <div class="col-md-7  border border-info m-auto">
+        <p class="d-flex flex-row align-item-center">Total Quantity:-{{data}}</p>
+    </div>
+  </div>
+  <hr>
+</div>
+<div class="row">
+  <div class="col-md-6 m-auto">
+    <app-child [(item)]="data" ></app-child>
+    <!-- two way binding in angular -->
+    <!-- <app-child [item]="data" (itemChange)="data=$event" ></app-child> -->
+  </div>
+</div>
+<!--
+<input type="text" #input class="form-control col-md-6 m-auto">
+<button type="button" (click)="inputItems(input.value)" class="btn btn-primary" name="button">add</button>
+
+<app-child [elem]="data1" "></app-child>
+
+<ul *ngFor="let item of data">
+  <li>{{item}}</li>
+</ul> -->

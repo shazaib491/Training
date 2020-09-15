@@ -1,0 +1,41 @@
+<p class="border p-3">Product Price :-
+  <b *ngIf="item">{{item * itemPrice }}</b>
+</p>
+<div class="col-md-6 d-flex justify-content-around m-auto">
+  <button type="submit" (click)="setAsc()" class="btn btn-info">Increase</button>
+  <button type="button" (click)="setDsc()" class="btn btn-danger" name="button">Decrease</button>
+</div>
+
+<!-- <p>child works!</p>
+
+<div class="container col-md-6">
+<label for="">Name</label>
+<input type="text"  #item name="" value="">
+<button type="button" (click)="shareFood(item.value)" name="button">Click</button>
+</div>
+
+<ul>
+  <li *ngFor="let list of elem">
+      {{list}}
+    </li>
+</ul>
+
+<form  #itemlist="ngForm"  (ngSubmit)="hitmodel(itemlist.value)" class="" action="index.html" method="post">
+  <div class="form-group">
+    <label for="">Name</label>
+    <input type="text" name="name" class="form-control"  ngModel value="">
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="text" name="email" class="form-control"  ngModel value="">
+  </div>
+  <div class="form-group">
+    <label for="">Message</label>
+    <input type="text" name="message" class="form-control" ngModel value="">
+  </div>
+  <div class="form-group">
+    <label for="">Salary</label>
+    <input type="text" name="salary" class="form-control" ngModel value="">
+  </div>
+  <button type="submit" class="btn btn-danger" name="button">Submit</button>
+</form> -->
